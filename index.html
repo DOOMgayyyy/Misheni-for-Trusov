@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+        <meta charset = "UTF-8">
+        <title>Скрытие блока</title>
+        <style>
+            
+            .hidden {
+                display: none;
+            }
+        </style>
+</head>
+
+
+<body>
+
+<form>
+        <!-- String for shooting -->
+        <input type="text" id="bangCount" placeholder = "Введите кол-во выстрелов"></input>
+        <!-- Button for shooting -->
+        <button type = "button" id = "bangButton">РАТСРЕЛЯТЬ!</button> 
+</form>  
+
+
+<form>
+        <!-- Check box for random shooting -->
+        <input type="checkbox" id="randomCheck" ><span>Выстрелы случайно</span>
+</form>
+
+
+
+
+<!-- Блок для ввода параметров разброса -->
+<div id = "spreadCheckDiv" calss = "hidden" >
+        <input type="text" id="spreadCount" placeholder="Введите радиус разброса"> <span>Заданный разброс</span>
+</div>
+
+
+
+
+<script src="Rastrel.js"></script>
+</body>
+</html>
