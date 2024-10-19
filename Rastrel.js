@@ -78,12 +78,14 @@ const randomCheck = document.getElementById("randomCheck"); // получаем 
 
 const shoots = document.getElementById("bangCount"); // Count of shoots
 // Преобразуем значение из поля ввода в число при необходимости
-let countShoot = parseInt(shoots.value); // Преобразование строки в число
+
 
 const sendButton = document.getElementById("bangButton"); // Button for shooting
 
 const spreadCheckDiv = document.getElementById("spreadCheckDiv"); // Block DIV for check random
+const spreadCheck1Div = document.getElementById("spreadCheck1Div");// Block 1DIV for check random
 const spreadCount = document.getElementById("spreadCount")// Counts of spread
+const spreadCheck = document.getElementById("spreadCheck");
 
 
 sendButton.addEventListener("click", function() {
@@ -106,6 +108,14 @@ sendButton.addEventListener("click", function() {
 
 randomCheck.addEventListener("change", function() {
     if (randomCheck.checked) {
+        spreadCheck1Div.classList.remove("hidden"); // unVanish block
+    } else {
+        spreadCheck1Div.classList.add("hidden"); // Vanish block
+    }
+});
+
+spreadCheck.addEventListener("change", function() {
+    if (spreadCheck.checked) {
         spreadCheckDiv.classList.remove("hidden"); // unVanish block
     } else {
         spreadCheckDiv.classList.add("hidden"); // Vanish block
